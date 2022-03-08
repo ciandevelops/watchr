@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BsSearch } from "react-icons/bs";
+import MovieCard from "./components/MovieCard";
 
 function App() {
   useEffect(() => {
@@ -28,10 +29,7 @@ function App() {
       </div>
 
       <div className="container">
-        <h1>{movie.Title}</h1>
-        <h3>{movie.Year}</h3>
-        <p>{movie.Type}</p>
-        <img src={movie.Poster} alt="movie poster" />
+        <MovieCard movie={movie} />
       </div>
     </div>
   );
